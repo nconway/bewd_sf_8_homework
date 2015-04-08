@@ -1,0 +1,9 @@
+<h1>New Ritly URL</h1>
+<br>
+
+<%= form_for @url  do |f| %>
+  <%= f.label :link, "URL to Shorten:" %>
+  <%= f.url_field :link %>
+  <br>
+  <%= f.submit "Shorten URL" %>
+<% end %>

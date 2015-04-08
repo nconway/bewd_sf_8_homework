@@ -1,5 +1,5 @@
 <li>
-  <h3><%= link_to story.title, story.link %></h3>
+  <h3><%= link_to story.title, "http://#{story.link}" %></h3>
   <p>
     <b>Upvotes</b>: <%= story.upvotes %> ||
     <b>Category</b>: <%= story.category %> ||
