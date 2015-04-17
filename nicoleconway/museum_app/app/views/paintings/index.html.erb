@@ -1,0 +1,36 @@
+<h1>Welcome to the Museum App</h1>
+
+
+<h2>Search for your painting</h2>
+
+<%= form_tag paintings_path, method: 'GET' do %> <!use GET for search results !>
+  <%= text_field_tag :q, params[:q] %> <!use "q" because that is standard. params is info from browser sent to server !>
+  <%= submit_tag 'search' %>
+<% end %>
+
+<h2>See our collection of paintings below</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Museum</th>
+      <th>Image</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @paintings.each do |painting| %>
+      <tr>
+        <td><%= painting.title %></td>
+        <td><%= painting.artist %></td>
+        <td><%= painting.museum %></td>
+        <td><%= link_to image_tag("#{painting.image}", :size =>"150"), "#{painting.image}" %></td>
+        <td><%= link_to 'Show', painting %></td>
+        <td><%= link_to 'Edit', edit_painting_path(painting) %></td>
+        <td><%= link_to 'Destroy', painting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       </tr>
+    <% end %>
+  </tbody>

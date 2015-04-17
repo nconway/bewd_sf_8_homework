@@ -1,33 +1,23 @@
-<div class='center jumbotran'>
-	<h1> Welcome to MyRecipes App</h1>
+<div class='center jumbotron'>
 
-	<h2>
-		This is the home page
-	</h2>
+	<div class='row'>
+		<%= image_tag("Twitter_fart.jpg", :alt => "twitter_fart") %>
+	</div>
+	
+	<div class='row'>
+		<%= image_tag("twitter_signin.png", :alt => "twitter_signin") %>
+	</div>
 
-	<%= link_to "Sign up now", "", class: "btn btn-lg btn-success" %>
 </div>
 
 <div class='row'>
-	<div class='col-lg-4'>
-		<h3 class ='midrow'>
-			View reciptes as gues
-		</h3>
-		<h2 class="left"> Browse adn view recipes as guest</h2>
-		<p><%= link_to "Browse Recipe listings", "", class: "btn btn-warning btn-small" %></p>
-	</div>
-	<div class='col-lg-4'>
-		<h3 class ='midrow'>
-			View reciptes as gues
-		</h3>
-		<h2 class="left"> Browse adn view recipes as guest</h2>
-		<p><%= link_to "Browse Recipe listings", "", class: "btn btn-warning btn-small" %></p>
-	</div>
-	<div class='col-lg-4'>
-		<h3 class ='midrow'>
-			View reciptes as gues
-		</h3>
-		<h2 class="left"> Browse adn view recipes as guest</h2>
-		<p><%= link_to "Browse Recipe listings", "", class: "btn btn-warning btn-small" %></p>
-	</div>
+
+				<h2>Like this site?  Donate to keep it going.</h2>
+
+				<p><%= link_to "Donate with Stripe", "", class: "btn btn-info navbar-btn" %> 
+				<%= link_to "Donate with PayPal", "", class: "btn btn-info navbar-btn" %>
+				<%= link_to "Donate with Braintree", "", class: "btn btn-info btn-small" %>
+				</p>
+		
+	
 </div>
