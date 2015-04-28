@@ -1,0 +1,83 @@
+Homework Class #13 Associations
+
+1. Amazon 
+	
+	Users
+		Fields
+			UserID
+			User Name
+			User Address
+			User Credit Card Info
+		Associations
+			Has Many transactions
+			Has Many Reviews
+
+	Transactions
+		Fields
+			Transaction ID
+			Transaction amount
+			Product Purchased
+		Associations
+			Belongs to Users
+			Belongs to products
+
+	Products
+		Fields
+			Product ID
+			Cost
+			Offering merchant
+			Description
+		Associations
+			Belongs to Merchants
+			Has Many Reviews
+			Has Many transactions
+
+	Merchants
+		Fields
+			Merchant ID
+			Merchant Category
+			Merchant Name
+			Merchant address
+		Associations
+			Has Many Products
+
+	Reviews
+		Fields
+			Review ID
+			User ID
+			Text
+			Rating
+		Associations
+			Belongs to Products
+			Belongs to Users
+
+
+2. Linkedin
+
+	Users
+		Fields
+			UserID
+			User Name
+			User Address
+			User Credit Card Info
+			Background description
+		Associations
+			Has Many Friends
+			Has Many Subscriptions
+
+	Friends
+		Fields
+			User ID
+		Associations
+			Belongs to Users
+
+	Subscriptions
+		Fields
+			Transaction ID
+			Transaction amount
+			Type
+			Subscription start date
+			Subscription end date
+		Associations
+			Belongs to Users
+
